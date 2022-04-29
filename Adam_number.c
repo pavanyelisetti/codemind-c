@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int x,rev=0,temp,r,c1,c2,temp2,r1,adam=0;
+    scanf("%d",&x);
+    temp=x;
+    while(temp>0)
+    {
+        r=temp%10;
+        rev=(rev*10)+r;
+        temp=temp/10;
+    }
+    c1=x*x;
+    c2=rev*rev;
+    temp2=c2;
+    while(temp2>0)
+    {
+       r1=temp2%10;
+       adam=(adam*10)+r1;
+       temp2=temp2/10;
+    }
+    if(c1==adam)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
