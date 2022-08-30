@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int i,a[100],max=0,j,c=0,pro=1;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>0)
+        {
+        pro=pro*a[i];
+        }
+    }
+    j=1;
+    while(1)
+    {
+        c=0;
+        for(i=0;i<n;i++)
+        {
+            if(j%a[i]==0)
+            {
+                c+=1;
+            }
+        }
+        if(c==n)
+        {
+            printf("%d",j);
+            break;
+        }
+        else
+        {
+        j++;
+        }
+    }
+}
